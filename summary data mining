@@ -1,0 +1,56 @@
+Berikut adalah summary dari proses dan hasil analisis yang dilakukan pada dataset "DoS ICMP Flood.csv" menggunakan algoritma Decision Tree Classifier:
+
+🧾 Langkah-Langkah Analisis Data:
+1, Import Data:
+
+Dataset "DoS ICMP Flood.csv" dibaca menggunakan pandas.
+
+Kolom 'Attack Name' dipisahkan sebagai target label (bs), sedangkan sisanya (br) sebagai fitur.
+
+2. Eksplorasi Kolom:
+
+Semua nama kolom fitur dicetak satu per satu.
+
+3. Seleksi Fitur:
+
+Hanya kolom dari indeks ke-7 hingga 81 (berdasarkan slicing .iloc[:, 7:82]) yang digunakan sebagai fitur untuk pelatihan.
+
+4. Split Data:
+
+Dataset dibagi menjadi data training dan testing dengan rasio 80:20 menggunakan train_test_split.
+
+5. Pelatihan Model:
+
+Model Decision Tree Classifier dari sklearn.tree dilatih menggunakan data training.
+
+6. Prediksi:
+
+Model digunakan untuk memprediksi label pada data test.
+
+7. Evaluasi Akurasi:
+
+Akurasi dihitung menggunakan accuracy_score.
+
+8. Confusion Matrix:
+
+Matriks kebingungan divisualisasikan menggunakan seaborn.heatmap.
+
+9.Laporan Klasifikasi:
+
+Menampilkan metrik evaluasi: precision, recall, f1-score untuk masing-masing kelas.
+
+✅ Hasil Evaluasi:
+Akurasi Model: (hasil numerik tidak ditampilkan dalam kode yang Anda berikan, tapi dihitung dengan accuracy_score(bs_test, bs_pred)).
+
+Confusion Matrix: Menampilkan jumlah prediksi benar dan salah untuk masing-masing kelas label.
+
+Classification Report: Memberikan insight mengenai kinerja model untuk setiap kelas:
+
+Precision: Tingkat ketepatan prediksi positif.
+
+Recall: Kemampuan model mendeteksi seluruh data positif.
+
+F1-Score: Rata-rata harmonis dari precision dan recall.
+
+📊 Visualisasi:
+Plot Confusion Matrix menggunakan warna-warna dari skema YlGnBu untuk memperjelas performa klasifikasi per kelas.
